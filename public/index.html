@@ -16,12 +16,18 @@
 		<div class="main_wrapper"  ng-repeat="dog in ctrl.dogs"> 
 
 			<div ng-click="showDetails = ! showDetails">
+
+
+
+		<!-- 	<div class='main_img' ng-style="{'background-image':'url({{ dog.images[0] }})'}"> -->
 				<img class='main_img' ng-src={{dog.images[0]}}>
-				<div class="dogDetails" ng-show="showDetails">
-					{{dog.name}}<br/>
-					{{dog.breed}}</br>
-					${{dog.rate}}
-				</div>
+					<div class="dogDetails" ng-show="showDetails">
+						<div class="dogDetails" ng-show="showDetails" {{dog.name}}></div><br/>
+						<div class="dogDetails" ng-show="showDetails" {{dog.breed}}></div><br/>
+						<div class="dogDetails" ng-show="showDetails" ${{dog.rate}}></div><br/>
+
+					</div>
+				
 			</div>	
 			
 		</div>

@@ -18,13 +18,22 @@ body {
 .main_img {
 	height: 400px;
 	width: 400px;
+	opacity: .8;
 	display: inline-block;
-
+	position: relative;
+	-webkit-filter: grayscale(100%);
 }
 
 .dogDetails {
-	z-index: 1000;
+	position: absolute;
+	z-index: 20;
 	font-size: 30px;
-	color: white;
+	color: black;
 	font-weight: bold;
+}
+
+img:hover {
+	opacity: 1;
+	-webkit-filter: grayscale(0);
+
 }
