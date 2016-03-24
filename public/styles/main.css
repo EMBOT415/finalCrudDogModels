@@ -1,0 +1,12 @@
+body {
+	background-color: linen;
+}
+
+#main_img {
+	height: 200px;
+	width: 200px;
+}
+
+ul {
+	list-style: none;
+}

@@ -5,7 +5,8 @@ var dogSchema = mongoose.Schema({
 	breed: String,
 	gender: String,
 	rate: Number,
-	age: Number
+	age: Number,
+	images: [String]
 
 })
 
