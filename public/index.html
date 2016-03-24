@@ -12,12 +12,20 @@
 	<h1>hellow from the dog side</h1>
 
 
-	<div id="main_wrapper">
-		<p ng-repeat="dog in ctrl.dogs"> 
-			<img class='main_img' ng-src={{dog.images[0]}}>
-		</p>
-	</div>
+	<div> 
+		<div class="main_wrapper"  ng-repeat="dog in ctrl.dogs"> 
 
+			<div ng-click="showDetails = ! showDetails">
+				<img class='main_img' ng-src={{dog.images[0]}}>
+				<div class="dogDetails" ng-show="showDetails">
+					{{dog.name}}<br/>
+					{{dog.breed}}</br>
+					${{dog.rate}}
+				</div>
+			</div>	
+			
+		</div>
+	</div>
 
 </body>
 </html>
