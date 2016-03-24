@@ -1,12 +1,31 @@
+@font-face {
+	font-family: nimbus;
+	src: url('/fonts/nimbusmono-regular.otf');
+
+}
+
+
 body {
 	background-color: linen;
+	text-align: center;
+	font-family: nimbus;
 }
 
-#main_img {
-	height: 200px;
-	width: 200px;
+#main_wrapper {
+	width: 1000px;
+	text-align: center;
+
 }
 
-ul {
-	list-style: none;
+
+.main_img {
+	height: 400px;
+	width: 400px;
+	display: inline-block;
+}
+
+p {
+
+	display: inline-block;
+	padding: 2em;
 }

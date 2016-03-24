@@ -11,17 +11,12 @@
 
 	<h1>hellow from the dog side</h1>
 
-	<ul>
-		<li ng-repeat="dog in ctrl.dogs"> 
-			{{dog.name}}<br/>
-			{{dog.breed}}<br/>
-			{{dog.gender}}<br/>
-			${{dog.rate}}<br/>
-			<!-- <img ng-src="image1 in dogs.images"/> {{images[0]}}<br/> -->
-			<img id='main_img' ng-src={{dog.images[0]}}>
 
-		</li>
-	</ul>
+	<div id="main_wrapper">
+		<p ng-repeat="dog in ctrl.dogs"> 
+			<img class='main_img' ng-src={{dog.images[0]}}>
+		</p>
+	</div>
 
 
 </body>

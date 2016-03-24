@@ -46,22 +46,29 @@ router.get('/seed', function(req, res){
 		gender: 'female',
 		rate: 700,
 		age: 8,
-		images:['http://res.cloudinary.com/embot415/image/upload/v1458830022/DSCN1736_c7meyq.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458830013/DSCN0136_evfitu.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458830013/DSCN0048_qyq4o0.jpg']
+		images:['http://res.cloudinary.com/embot415/image/upload/v1458837293/DSCN1736_mcft3o.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458830013/DSCN0136_evfitu.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458830013/DSCN0048_qyq4o0.jpg']
 },
 	{	name: 'Emma', 
 		breed: 'goldendoodle',
 		gender: 'female',
 		rate: 1500,
 		age: 10,
-		images:['http://res.cloudinary.com/embot415/image/upload/v1458829970/IMG_7688_dpmcrp.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458830001/IMG_7702_h9ei9u.jpg']
+		images:['http://res.cloudinary.com/embot415/image/upload/v1458838306/IMG_7688_zsz1lu.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458830001/IMG_7702_h9ei9u.jpg']
 },
 	{	name: 'Alfie', 
 		breed: 'tan dog',
 		gender: 'male',
 		rate: 1000,
 		age: 7,
-		images: ['http://res.cloudinary.com/embot415/image/upload/v1458829162/IMG_0361_ynyqha.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458829174/IMG_1084_xubbfv.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458829167/IMG_1011_u8xj0d.jpg']
+		images: ['http://res.cloudinary.com/embot415/image/upload/v1458837308/IMG_0361_hlkpoo.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458829174/IMG_1084_xubbfv.jpg', 'http://res.cloudinary.com/embot415/image/upload/v1458829167/IMG_1011_u8xj0d.jpg']
 },
+	{	name: 'Wilbur', 
+			breed: 'French Bulldog',
+			gender: 'male',
+			rate: 1100,
+			age: 7,
+			images: ['http://res.cloudinary.com/embot415/image/upload/v1458841469/Screen_Shot_2016-03-24_at_1.38.49_PM_brc0mm.png', 'http://res.cloudinary.com/embot415/image/upload/v1458841469/Screen_Shot_2016-03-24_at_1.39.00_PM_aqu3rj.png', 'http://res.cloudinary.com/embot415/image/upload/v1458841471/Screen_Shot_2016-03-24_at_1.37.46_PM_ytpu8j.png', 'http://res.cloudinary.com/embot415/image/upload/v1458841470/Screen_Shot_2016-03-24_at_1.43.17_PM_yzjwg9.png', 'http://res.cloudinary.com/embot415/image/upload/v1458841470/Screen_Shot_2016-03-24_at_1.40.09_PM_ba42al.png']
+	},
 	{	name: 'Wrigley', 
 		breed: 'norfolk terrier',
 		gender: 'male',
