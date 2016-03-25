@@ -98,6 +98,7 @@ router.get('/seed', function(req, res){
 	});
 });
 
+
 router.post('/', function(req, res){
 	Dog.create(req.body, function(err, data){
 		res.send(data)
@@ -110,17 +111,29 @@ router.post('/', function(req, res){
 // 	})
 // })
 
-router.delete('/:id', function(req, res){
-console.log('delete route accessed');
-	Dog.findById(req.params.id, function(err, dog){
-		console.log("this is req.params.id" + req.params.id)
-		console.log(dog)
-		Dog.remove(function(err){
-				res.send('hi')
-		})
 
+router.delete('/:dogId', function(req, res){
+	console.log('delete accessed from dogs controller')
+	console.log(req.params.dogId)
+	Dog.findByIdAndRemove(req.params.dogId, function(err, dog){
+		res.send('hi');
 	})
 })
+
+
+// router.delete('/:id', function(req, res){
+// console.log('delete route accessed');
+// 	Dog.findByIdAndRemove(req.params.id, function(err, data){
+// 		// console.log("this is req.body" + req.body)
+// 		//console.log("this is req.params" + req.params)
+
+// 		console.log(data)
+// 		// Dog.remove(function(err){
+// 				res.send('hi')
+// 		// })
+
+// 	})
+// })
 
 module.exports = router;
 

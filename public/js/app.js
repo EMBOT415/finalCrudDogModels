@@ -57,23 +57,51 @@ this.addDog = function(){
 // 	}
 // 	)};
 
-this.deleteDog = function(dog1){
-	console.log('delete clicked');
 
-	$http({
-		method: "DELETE",
-		url: "/dogs/:id",
+this.deleteDog = function(dog){
+
+	 	console.log('delete clicked')
+	 	this.dogId = dog._id;
+	 	console.log(dog._id)
+		$http({
+			method: "DELETE",
+			url:'/dogs/' + controller.dogId,
+			data: dog
+		})
+		.then (
+			function(response) {
+					//controller.getUsers();
+					console.log('success')
+			}, 
+			function(err){
+				console.log(err)
+			}
+		)
+	 };
+
+//This deletes everything
+
+// this.deleteDog = function(dog){
+// 	// var doggie;
+// 	// this.doggie = dog1
+// 	console.log('delete clicked');
+// 	console.log(dog) //undefined
+// 	$http({
+// 		method: "DELETE",
+// 		url: "/dogs/:id",
+// 		data: dog
 
 
-	})
-	.then(function(results){
-	 console.log(results)
-	 initialize();
-	},
-	function(err){
-		console.log(err)
+// 	})
+// 	.then(function(results){
+// 	 console.log('success accessed')
+// 	 console.log(results)
+// 	 initialize();
+// 	},
+// 	function(err){
+// 		console.log(err)
 
-	}
-	)};
+// 	}
+// 	)};
 
 }]);  // close main controller
