@@ -14,12 +14,11 @@
 	<h1>hellow from the dog side</h1>
 
 	<div class="main_wrapper" ng-repeat="dog in ctrl.dogs"> 
-		<button id="delete" ng-click="ctrl.deleteDog(dog)">delete me</button>
 		<div id="img_wrapper" ng-click="showDetails =! showDetails">
 			<div class="dogDetails" ng-show="showDetails">
 				<span>{{ dog.name }}</span> <br/>
 				<span>${{ dog.rate }}/hr</span><br/>
-				<button id="delete" ng-click="ctrl.deleteDog(dog1)">D</button>
+				<span id="delete" ng-click="ctrl.deleteDog(dog)">D</span>
 				<span id="edit" ng-click="ctrl.editDog(dog)">E</span>
 			</div>
 
