@@ -98,5 +98,12 @@ router.get('/seed', function(req, res){
 	});
 });
 
+router.post('/', function(req, res){
+	Dog.create(req.body, function(err, data){
+		res.send(data)
+	})
+})
+
+
 
 module.exports = router;

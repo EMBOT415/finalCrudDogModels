@@ -7,30 +7,33 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
+
+
 <body ng-controller="mainController as ctrl">
 
 	<h1>hellow from the dog side</h1>
 
+	<div class="main_wrapper" ng-repeat="dog in ctrl.dogs"> 
 
-	<div> 
-		<div class="main_wrapper"  ng-repeat="dog in ctrl.dogs"> 
-
-			<div ng-click="showDetails = ! showDetails">
-
-
-
-		<!-- 	<div class='main_img' ng-style="{'background-image':'url({{ dog.images[0] }})'}"> -->
-				<img class='main_img' ng-src={{dog.images[0]}}>
-					<div class="dogDetails" ng-show="showDetails">
-						<div class="dogDetails" ng-show="showDetails" {{dog.name}}></div><br/>
-						<div class="dogDetails" ng-show="showDetails" {{dog.breed}}></div><br/>
-						<div class="dogDetails" ng-show="showDetails" ${{dog.rate}}></div><br/>
-
-					</div>
-				
-			</div>	
-			
+		<div id="img_wrapper" ng-click="showDetails =! showDetails">
+			<div class="dogDetails" ng-show="showDetails">
+				<span>{{ dog.name }}</span> <br/>
+				<span>{{ dog.rate | currency }}/hr</span><br/>
+			</div>
+			<img class='main_img' ng-src={{dog.images[0]}}>
 		</div>
+	</div>	
+	
+	<div>
+		<p> NEW DOG</p>
+		<form name="form" ng-submit="ctrl.addDog()">
+			<input type="text" placeholder="name" ng-model="ctrl.formdata.name"></br>
+			<input type="text" placeholder="breed" ng-model="ctrl.formdata.breed"></br>
+			<input type="text" placeholder="gender" ng-model="ctrl.formdata.gender"></input></br>
+			<input type="text" placeholder="rate" ng-model="ctrl.formdata.rate"></br>
+			<input type="text" placeholder="image url" ng-model="ctrl.formdata.images"></br>
+			<button>SUBMIT</button>
+		</form>
 	</div>
 
 </body>
