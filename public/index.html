@@ -18,10 +18,13 @@
 		<div id="img_wrapper" ng-click="showDetails =! showDetails">
 			<div class="dogDetails" ng-show="showDetails">
 				<span>{{ dog.name }}</span> <br/>
-				<span>{{ dog.rate | currency }}/hr</span><br/>
+				<span>${{ dog.rate }}/hr</span><br/>
 			</div>
+
 			<img class='main_img' ng-src={{dog.images[0]}}>
 		</div>
+		<span id="edit" ng-click="ctrl.editDog(dog1)">E</span>
+		<span id="delete" ng-click="ctrl.deleteDog(dog1)">D</span>
 	</div>	
 	
 	<div>

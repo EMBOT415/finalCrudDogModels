@@ -104,6 +104,24 @@ router.post('/', function(req, res){
 	})
 })
 
+// router.post('/', function(req, res){
+// 	Dog.create(req.body, function(err, data){
+// 		res.send(data)
+// 	})
+// })
 
+router.delete('/:id', function(req, res){
+console.log('delete route accessed');
+	Dog.findById(req.params.id, function(err, dog){
+		console.log("this is req.params.id" + req.params.id)
+		console.log(dog)
+		Dog.remove(function(err){
+				res.send('hi')
+		})
+
+	})
+})
 
 module.exports = router;
+
+

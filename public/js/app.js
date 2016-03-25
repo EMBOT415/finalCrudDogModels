@@ -7,6 +7,7 @@ app.controller("mainController", ['$http', function($http){
 	var controller = this;
 		
 
+//automate form empty
 	var initialize = function() {
   this.formdata = {};
 }
@@ -39,6 +40,40 @@ this.addDog = function(){
 	}
 	)};
 
+// this.editDog = function(dog1){
+// 	$http({
+// 		method: "POST",
+// 		url: "/dogs",
+// 		data: this.formdata
 
+// 	})
+// 	.then(function(results){
+// 	 console.log(results)
+// 	 initialize();
+// 	},
+// 	function(err){
+// 		console.log(err)
+
+// 	}
+// 	)};
+
+this.deleteDog = function(dog1){
+	console.log('delete clicked');
+
+	$http({
+		method: "DELETE",
+		url: "/dogs/:id",
+
+
+	})
+	.then(function(results){
+	 console.log(results)
+	 initialize();
+	},
+	function(err){
+		console.log(err)
+
+	}
+	)};
 
 }]);  // close main controller
