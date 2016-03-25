@@ -39,7 +39,10 @@ app.controller("mainController", ['$http', function($http){
 		})
 		.then(function(results){
 		 console.log(results)
+		
 		 controller.getDogs();
+		 form.reset();
+		 //this.formdata = null;
 		  //initialize();
 		},
 		function(err){

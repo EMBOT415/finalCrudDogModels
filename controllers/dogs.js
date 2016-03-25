@@ -99,6 +99,15 @@ router.get('/seed', function(req, res){
 });
 
 
+
+router.post('/', function(req, res){
+	Dog.create(req.body, function(err, data){
+		res.send(data)
+	})
+})
+
+
+
 router.put('/:dogId', function(req, res){
 	Dog.findByIdAndUpdate(req.params.dogId, function(err, dog){
 		res.send("updated")
